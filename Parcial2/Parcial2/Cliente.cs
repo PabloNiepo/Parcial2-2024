@@ -9,20 +9,23 @@ namespace Parcial2
     class Cliente : Ticket
     {
         private static int nroinicio;
-        private int dni;
+        private long dni;
 
         public Cliente (string DNI)
         {
-            try
-            {
+            
+           for (int i = 0; i < DNI.Length; i++)
+                {
+                    if (!char.IsNumber(DNI[i])) throw new ExcepcionDNI("Hay caracteres no numericos ") ;
+                }
 
+                dni = Convert.ToInt64(DNI);
 
-            }
-            catch (Exception)
-            {
-
-                throw;
-            }
+                if (dni < 30000000 && dni > 45000000)
+                {
+                    throw new ExcepcionDNI("Numero de documento fuera de rango");
+                }            
+           
         }
     }
 }

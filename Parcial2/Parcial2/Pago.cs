@@ -17,6 +17,7 @@ namespace Parcial2
             }
 
         public void MontoPago(double monto)
-        { }
+        {
+        }
     }
 }

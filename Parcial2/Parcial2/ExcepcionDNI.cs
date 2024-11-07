@@ -6,7 +6,12 @@ using System.Threading.Tasks;
 
 namespace Parcial2
 {
-    class ExcepcionDNI 
+    class ExcepcionDNI : ApplicationException
     {
+       public ExcepcionDNI() { }
+
+        public ExcepcionDNI(string mensaje) : base(mensaje) { }
     }
+
+
 }
