@@ -19,13 +19,17 @@ namespace Parcial2
                     if (!char.IsNumber(DNI[i])) throw new ExcepcionDNI("Hay caracteres no numericos ") ;
                 }
 
-                dni = Convert.ToInt64(DNI);
+                this.dni = Convert.ToInt64(DNI);
 
                 if (dni < 30000000 && dni > 45000000)
                 {
                     throw new ExcepcionDNI("Numero de documento fuera de rango");
-                }            
+                }          
            
         }
+
+
+
+
     }
 }
